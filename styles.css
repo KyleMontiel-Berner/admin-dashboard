@@ -5,31 +5,55 @@ body {
     background-color: #f4f4f4;
     color: #333;
     display: grid;
-    grid-template-rows: repeat(10, 1fr);
-    grid-template-columns: 20vw 1fr 1fr 15vw;
-    grid-column-gap: 10px; 
+    grid-template-rows: repeat(10, 50px);
+    grid-template-columns: 18vw 1fr 1fr 18vw;
+    grid-column-gap: 10px;
 }
 
 .left-panel {
     background-color: blue;
+    grid-area: 1 / 1 / 11 / 2;
 }
 
 .search-bar {
-    background-color: whitesmoke
+    background-color: whitesmoke;
+    grid-area: 1 / 2 / 2 / 5;
 }
 
 .profile {
-    background-color: lightgray;
+    background-color: white;
+    grid-area: 2 / 2 / 3 / 5;
 }
 
-.project {
+.project-section {
     background-color: violet;
+    grid-area: 3 / 2 / 10 / 4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px 10px;
 }
 
 .right-panel {
     background-color: orange;
+    grid-area: 3 / 4 / 11 / 5;
 }
 
-.notification {
-    background-color: darkorange;
+.project1{
+    background-color: lightblue;
+}
+.project2{
+    background-color: lightgreen;
+}
+.project3{
+    background-color: lightcoral;
+}
+.project4{
+    background-color: lightpink;
+}
+.project5{
+    background-color: lightseagreen;
+}
+.project6{
+    background-color: lightgoldenrodyellow;
 }
