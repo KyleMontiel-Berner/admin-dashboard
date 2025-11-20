@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: 20vw 1fr 1fr 15vw;
+    grid-column-gap: 10px; 
+}
+
+.left-panel {
+    background-color: blue;
+}
+
+.search-bar {
+    background-color: whitesmoke
+}
+
+.profile {
+    background-color: lightgray;
+}
+
+.project {
+    background-color: violet;
+}
+
+.right-panel {
+    background-color: orange;
+}
+
+.notification {
+    background-color: darkorange;
+}
