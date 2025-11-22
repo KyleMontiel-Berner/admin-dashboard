@@ -14,6 +14,11 @@ body {
     grid-gap: 25px 10px;
 }
 
+img {
+    width: 50px;
+    height: 50px;
+}
+
 .left-panel {
     background-color: #1992D4;
     grid-area: 1 / 1 / 11 / 2;
@@ -21,7 +26,7 @@ body {
     color: rgba(245, 245, 245, 0.95);
 }
 
-img {
+.item img {
     width: 20px;
     height: 20px;
     margin-right: 10px;
@@ -29,8 +34,13 @@ img {
 }
 
 .dashboard-header {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
+}
+
+.dashboard-header > img {
+    width: 30px;
+    height: 30px;
 }
 
 
@@ -55,6 +65,75 @@ img {
     color: rgba(0, 0, 0, 0.833);
     background-color: #FFFFFF;
     box-shadow: 0 4px 8px -3px rgba(0,0,0,0.3);
+    display: grid;
+    grid-template: 1fr 1fr / repeat(4, auto);
+    column-gap: 20px;
+}
+
+.search-right {
+    grid-area: 1 / 4 / 2 / 5;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.greeting {
+    grid-area: 2 / 1 / 3 / 4;
+    display: flex;
+}
+
+.greeting-txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+}
+
+.greeting-txt p,
+.greeting-txt h2 {
+    padding: 3px;
+    margin: 0 0 0 10px;
+    font-weight: 700;
+}
+
+.greeting img {
+    width: 60px;
+    height: 60px;
+    align-self: center;
+}
+
+input {
+    width: 45vw;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    background-color: #E2E8F0;
+}
+
+.input {
+    grid-area: 1 / 1 / 3 / 2;
+    display: flex;
+    margin-top: 25px;
+    margin-left: 40px;
+}
+
+.magnify {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.greeting {
+    grid-area: 2 / 1 / 3 / 3;
+    padding-left: 40px;
+}
+
+.header-btn {
+    align-self: center;
+    justify-self: end;
+    margin-right: 40px;
+    grid-area: 2 / 3 / 3 / 5;
 }
 
 button {
@@ -62,7 +141,8 @@ button {
     font-size: 10px;
     color: white;
     border: none;
-    width: 60px;
+    width: 100px;
+    height: 30px;
     padding: 5px;
     border-radius: 30px;
 }
@@ -81,6 +161,20 @@ button {
     padding-left: 10px;
     box-shadow: 0 4px 8px -3px rgba(0,0,0,0.3);
     padding: 10px;
+    position: relative;
+}
+
+.project-icons {
+    position: absolute;
+    display: flex;
+    bottom: 20px;
+    right: 30px;
+    gap: 40px;
+}
+
+.project-icons img {
+    width: 20px;
+    height: 20px;
 }
 
 .right-panel {
@@ -101,23 +195,58 @@ button {
     grid-template-columns: 1fr;
 }
 
-.announcement-content:not(:last-child) {
-    border-bottom: 1px solid #E5E7EB;
-}
-
 .announcement-content {
     padding-bottom: 20px;
     margin: auto;
 }
+
+.announcement-content:not(:last-child) {
+    border-bottom: 1px solid #E5E7EB;
+}
+
 
 .trending {
     grid-area: 3 / 1 / 5 / 2;
     background-color: #FFFFFF;
     padding: 10px;
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: 1fr 3fr;
+    grid-column-gap: 10px;
 }
+
+.trend1 {
+    grid-area: 1 / 1 / 3 / 2;
+}
+
+.trend-txt1 {
+    grid-area: 1 / 2 / 3 / 3;
+}
+
+.trend2 {
+    grid-area: 3 / 1 / 5 / 2;
+}
+
+.trend-txt2 {
+    grid-area: 3 / 2 / 5 / 3;
+}
+
+.trend3 {
+    grid-area: 5 / 1 / 7 / 2;
+}
+
+.trend-txt3 {
+    grid-area: 5 / 2 / 7 / 3;
+}
+
+.trend4 {
+    grid-area: 7 / 1 / 9 / 2;
+}
+
+.trend-txt4 {
+    grid-area: 7 / 2 / 9 / 3;
+}
+
 
 .project p,
 .right-panel p,
